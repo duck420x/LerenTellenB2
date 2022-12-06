@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;background-color: #51acc59a;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(193, 193, 193, 0.331);
 }
 
 .header {
@@ -11,7 +12,7 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: rgb(4, 78, 174);
+  background-color: #333333;
   position: sticky;
   top: 0;
 }
@@ -29,9 +30,9 @@ body {
 }
 
 #navbar a:hover {
-  background-color: #5ccffcd1;
-  color: rgb(0, 0, 0);
-  border-radius: 10px;
+  background-color: #656565bb;
+  color: white;
+  border-radius: 5px;
 }
 
 
@@ -72,22 +73,36 @@ body {
     font-weight: 550;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: underline;
+    margin-top: -1%;
 }
 main{
   text-align: center;
 }
 .InfoHome{
-  margin: 0% 5% 0% 5%;
-  box-shadow: 3px 3px 3px  grey;
-  background-color: rgba(71, 243, 243, 0.642);
-  padding: 1% 2% 2% 2%;
-  border-radius: 15px;
+  margin: -1% 7% 0% 7%;
+  background-color: #a9a9a96c;
+  padding: 1% 0% 2% 0%;
+  border-radius: 5px;
 }
 .info{
-  margin: 0% 5% 0% 5%;
+  margin: -0.5% 2% -0.5% 2%;
 }
 footer{
   background-color: black;
   bottom: 0%;
   position: sticky;
+  height: 5%;
+}
+.knop{
+  background-color: #65656589;
+  margin: 2% 46% 2% 46%;
+  padding: 0.5% 0 0.5% 0; 
+  transition-duration: 500ms;
+  border: 3px solid #65656589;
+}
+.knop:hover{
+border-radius: 10px;
+background-color: #65656539;
+border: 3px solid #65656539;
+padding: -1%;
 }
