@@ -3,6 +3,8 @@ body {
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgba(193, 193, 193, 0.331);
+  position: relative;
+
 }
 
 .header {
@@ -87,11 +89,11 @@ main{
 .info{
   margin: -0.5% 2% -0.5% 2%;
 }
-footer{
-  background-color: black;
-  bottom: 0%;
-  position: sticky;
-  height: 5%;
+.footer{
+  position: fixed;
+  background-color: #333333;
+  height: 8%;
+  text-align: center;
 }
 .knop{
   background-color: #65656589;
@@ -110,4 +112,9 @@ padding: -1%;
   background-color: #6261615d;
   margin: 7% 40% 0% 40%;
   padding: 2% 1%;
+}
+.footr{
+  width: 100vw;
+  color: white;
+  bottom: 0px;
 }
