@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@font-face {
+  font-family: myFirstFont;
+  src: url('./fontfolder/JosefinSans-VariableFont_wght.ttf')  format('truetype');
+}
 body {
   margin: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgba(193, 193, 193, 0.331);
+  background-color: #FAF7F0;
   position: relative;
 
 }
 
 .header {
-  background-color: #f1f1f1;
+
+  background-color: #FAF7F0;
   margin-bottom: -0.40%;
 }
 
 #navbar {
   overflow: hidden;
-  background-color: #333333;
+  background-color: #98A8F8;
   position: sticky;
   top: 0;
+  min-width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 
@@ -42,7 +50,8 @@ body {
   padding: 16px;
 }
 .active{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Rubik Vinyl', cursive;
+  font-size: larger;
   font-size: 600;
   margin-left: 1.5%;
 }
@@ -57,12 +66,16 @@ body {
   padding-top: 60px;
 }
 .header{
-  background-color: #fbfcfc
+  background-color: #FAF7F0
 }
 #fotoHeader{
-  min-width: 99.7vw;
-  min-height: auto;
-  z-index: -1;
+  background-color: #FAF7F0;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 2%; */
+  min-width: 100vw;
 }
 .nav2{
   float: right;
@@ -70,11 +83,11 @@ body {
   font-weight: 500;
 }
 #titleHome{
+  
     font-size: xxx-large;
     color: black;
     font-weight: 550;
-    font-family: 'Courier New', Courier, monospace;
-    text-decoration: underline;
+    font-family: 'Rubik Vinyl', cursive;
     margin-top: -1%;
 }
 main{
@@ -82,39 +95,68 @@ main{
 }
 .InfoHome{
   margin: -1% 7% 0% 7%;
-  background-color: #a9a9a96c;
+  background-color: #bccef87f;
   padding: 1% 0% 2% 0%;
   border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .info{
   margin: -0.5% 2% -0.5% 2%;
 }
-.footer{
-  position: fixed;
-  background-color: #333333;
-  height: 8%;
-  text-align: center;
-}
+
 .knop{
-  background-color: #65656589;
+  background-color: #BCCEF8;
   margin: 2% 46% 2% 46%;
   padding: 0.5% 0 0.5% 0; 
   transition-duration: 500ms;
-  border: 3px solid #65656589;
+  border: 2px solid #65656539;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.knop2{
+  background-color: #dae4faf6;
+
+  padding: 2% 2%; 
+  transition-duration: 500ms;
+  border: 2px solid #eae9e939;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .knop:hover{
 border-radius: 10px;
-background-color: #65656539;
-border: 3px solid #65656539;
+background-color: #87a0da;
+border: 2px solid #a2ecf4;
 padding: -1%;
 }
+.knop2:hover{
+  border-radius: 8px;
+  background-color: #f4f6fbd1;
+  border: 2px solid #89dfe8;
+  padding: -1%;
+  }
 .Form1{
-  background-color: #6261615d;
-  margin: 7% 40% 0% 40%;
+  display: flex;
+  background-color: #bccef8bd;
+  margin: 7% 36% 0 36%;
   padding: 2% 1%;
+  border-radius: 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  font-family: 'myFirstFont';
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 200px;
+}
+.footer{
+  min-width: 100%;
+  bottom: 0%;
+  position: fixed;
+  background-color: #98A8F8;
+  height: 8%;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .footr{
-  width: 100vw;
   color: white;
   bottom: 0px;
 }
