@@ -15,15 +15,15 @@
             <div id="navbar">
                 <a class="active" href="javascript:void(0)">Leren Tellen</a>
                 <div class="nav2">
-                    <a href="./signUP.html" >Sign-up</a>
-                    <a href="../index.html">Home</a>
+                    <a href="../logIn/">Log-in</a>
+                    <a href="../">Home</a>
                 </div>
             </div>
         </header>
         <main>
             <div class="Form1">
-                <form action="../php/Inlog.php" enctype="multipart/form-data" method="post">
-                    <label>LOG-IN</label>
+                <form action="../php/Inlog.php" method="post">
+                    <label class="input2">SIGN-UP</label>
                     <div>
                         <div>
                             <p>Naam:</p>
@@ -31,17 +31,17 @@
                             <p>Password:</p>
                         </div>
                         <div>
-                            <input type="text" id="naam" name="naam">
-                            <input type="email" id="email" name="email">
-                            <input type="text" id="password" name="password">
+                            <input type="text" id="naam" name="naam" required>
+                            <input type="email" id="email" name="email" required>
+                            <input type="text" id="password" name="password" required>
                         </div>
                     </div>
-                    <input type="submit" name="submit" class="knop2">
+                    <input type="submit" name="submit" class="knop2 input2">
                 </form>
             </div>
         </main>
         <footer>
-            <div>
+            <div id="footer">
                 <p>teste11111</p>
             </div>
         </footer>
