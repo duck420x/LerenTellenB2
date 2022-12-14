@@ -23,19 +23,31 @@
         <div id="navbar">
             <a class="active" href="javascript:void(0)">Leren Tellen</a>
             <div class="nav2">
-                <a href="signup/" >Sign-Up</a>
-                <a href="login/" >Log-In</a>
-                <a href="highscores/" >High-Scores</a>
+                <?php
+                    if(isset($_SESSION['loggedIn'])){
+                        $username = $_SESSION['username'];
+                        echo "
+                            <p>Username: $username</p>
+                            <a href='logout.php'>Logout</a>
+                        ";
+                    }
+                    else{
+                        echo "
+                            <a href='signup/'>Signup</a>
+                            <a href='login/'>Login</a>
+                        ";
+                    }
+                ?>
+                <a href="highscores/">Highscores</a>
             </div>
         </div>
         <main>
-
             <div class="InfoHome">
                 <p class="info"> <div id="titleHome">
                     <p class="ttl1" style="text-align: center;">Leren Tellen!</p>
                 </div>Dit spel is gemaakt voor basis school leerlingen die willen leren tellen. De bedoeling is dat de leerlingen leren tellen tot 50.<br/> Dit gaan we doen door een aantal levels te maken van 10 vragen die steeds moeilijker worden, van deze 10 vragen <br/> heb je er minimaal 6 goed nodig om door te gaan naar het volgende level. </p>
             </div>
-            <p class="knop">Play</p>   
+            <p class="knop">Play</p>
         </main>
         <footer>
             <div>

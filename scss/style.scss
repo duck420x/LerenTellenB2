@@ -32,25 +32,34 @@ header{
     top: 0;
     min-width: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
 
-#navbar a{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    transition-duration: 700ms;
-}
+    > div{
+        > p{
+            font-size: medium;
+            display: inline-block;
+            float: left;
+            color: white;
+            margin: 15px 10px 0 0;
+        }
+    }
 
-#navbar a:hover{
-    background-color: #656565bb;
-    color: white;
-    border-radius: 5px;
-}
+    a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition-duration: 700ms;
+    }
 
+    a:hover{
+        background-color: #656565bb;
+        color: white;
+        border-radius: 5px;
+    }
+}
 .content{
     padding: 16px;
 }
@@ -104,6 +113,7 @@ main{
     background-color: #bccef87f;
     padding: 1% 2% 2% 2%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
 }
 
 .info{
@@ -118,6 +128,7 @@ main{
     transition-duration: 500ms;
     border: 2px solid #65656539;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
 }
 
 .knop:hover{
