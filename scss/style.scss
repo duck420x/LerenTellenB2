@@ -124,14 +124,6 @@ main{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.knop2{
-    background-color: #dae4faf6;
-    padding: 2% 2%; 
-    transition-duration: 500ms;
-    border: 2px solid #eae9e939;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
 .knop:hover{
     border-radius: 10px;
     background-color: #87a0da;
@@ -192,6 +184,14 @@ main{
             > input{
                 display: block;
             }
+        }
+
+        > input{
+            background-color: #dae4faf6;
+            padding: 2% 2%; 
+            transition-duration: 500ms;
+            border: 2px solid #eae9e939;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
     }
 }

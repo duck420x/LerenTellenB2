@@ -1,3 +1,8 @@
+<!-- Start a php session (this must be before <!DOCTYPE html>!!!) -->
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,3 +46,6 @@
         </footer>
     </body>
 </html>
+
+<?php
+    $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
