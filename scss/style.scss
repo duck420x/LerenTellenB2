@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
-@font-face {
-    font-family: myFirstFont;
-    src: url('./fontfolder/JosefinSans-VariableFont_wght.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@800&display=swap');
 
 body{
     margin: 0;
@@ -105,8 +102,7 @@ main{
 .InfoHome{
     margin: 3% 7% 0% 7%;
     background-color: #bccef87f;
-    padding: 1% 0% 2% 0%;
-    border-radius: 5px;
+    padding: 1% 2% 2% 2%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -150,7 +146,7 @@ main{
 
     > form{
         > div{
-            width: 320px;
+            width: 330px;
             height: 140px;
             margin: 10px 0 0 0;
 
@@ -209,6 +205,8 @@ footer{
             color: white;
             margin: 0;
             padding: 15px;
+         
+            
         }
     }
 }

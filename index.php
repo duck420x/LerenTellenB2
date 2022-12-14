@@ -32,16 +32,14 @@
 
             <div class="InfoHome">
                 <p class="info"> <div id="titleHome">
-                    <p class="ttl1" style="text-align: left;margin-left: 4%;">Leren Tellen!</p>
-                </div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste reiciendis recusandae eum, nobis nihil assumenda fugit asperiores aspernatur facilis maxime nulla illum. Temporibus cumque illo unde, repudiandae est fugiat consequatur.
-                Alias at corrupti praesentium tempore asperiores maiores provident fugit sapiente quo, officiis repudiandae, veritatis nobis! Nisi et ad animi assumenda quo in voluptatem quod commodi, architecto odit modi officia excepturi.
-                Est officexpedita quaerat magnam deleniti? Eveniet, quia.</p>
+                    <p class="ttl1" style="text-align: center;">Leren Tellen!</p>
+                </div>Dit spel is gemaakt voor basis school leerlingen die willen leren tellen. De bedoeling is dat de leerlingen leren tellen tot 50.<br/> Dit gaan we doen door een aantal levels te maken van 10 vragen die steeds moeilijker worden, van deze 10 vragen <br/> heb je er minimaal 6 goed nodig om door te gaan naar het volgende level. </p>
             </div>
             <p class="knop">Play</p>   
         </main>
         <footer>
             <div>
-                <p>teste11111</p>
+                <p>Powered by GLR</p>
             </div>
         </footer>
     </body>
