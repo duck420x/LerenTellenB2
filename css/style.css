@@ -3,6 +3,9 @@
   font-family: myFirstFont;
   src: url('./fontfolder/JosefinSans-VariableFont_wght.ttf')  format('truetype');
 }
+html{
+  width: fit-content;
+}
 body {
   margin: 0;
   font-size: 28px;
@@ -94,17 +97,18 @@ main{
   text-align: center;
 }
 .InfoHome{
-  margin: -1% 7% 0% 7%;
+  margin: 3% 7% 0% 7%;
   background-color: #bccef87f;
   padding: 1% 0% 2% 0%;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .info{
-  margin: -0.5% 2% -0.5% 2%;
+  margin: 1% 2% -0.5% 2%;
 }
 
 .knop{
+  min-width: 100px;
   background-color: #BCCEF8;
   margin: 2% 46% 2% 46%;
   padding: 0.5% 0 0.5% 0; 
@@ -148,7 +152,7 @@ padding: -1%;
   min-width: 200px;
 }
 .footer{
-  min-width: 100%;
+  min-width: 100vw;
   bottom: 0%;
   position: fixed;
   background-color: #98A8F8;
