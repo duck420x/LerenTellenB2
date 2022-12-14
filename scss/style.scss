@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
 @font-face {
     font-family: myFirstFont;
-    src: url('./fontfolder/JosefinSans-VariableFont_wght.ttf')    format('truetype');
+    src: url('./fontfolder/JosefinSans-VariableFont_wght.ttf') format('truetype');
 }
 
 body{
@@ -154,12 +154,19 @@ main{
     border-radius: 10px;
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
     font-family: 'myFirstFont';
-    justify-content: space-around;
-    flex-direction: row;
-    align-content: center;
-    flex-wrap: wrap;
-    align-items: center;
     min-width: 200px;
+
+    > form{
+        > div:nth-last-of-type(1){
+            float: left;
+            display: inline;
+        }
+
+        > div:nth-last-of-type(2){
+            float: right;
+            display: inline;
+        }
+    }
 }
 
 footer{

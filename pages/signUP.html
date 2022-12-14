@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="../css/style.css">
-    <meta name="Author" content="Stef88129">
-    <title>Inlog</title>
-</head>
-<body>
-    <header>
-        <div id="navbar">
-            <a class="active" href="javascript:void(0)">Leren Tellen</a>
-            <div class="nav2">
-            <a href="./logIN.html">Log-in</a>
-            <a href="../index.html" >Home</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <meta name="Author" content="Stef88129">
+        <title>Inlog</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/loginStyle.css">
+    </head>
+    <body>
+        <header>
+            <div id="navbar">
+                <a class="active" href="javascript:void(0)">Leren Tellen</a>
+                <div class="nav2">
+                    <a href="./logIN.html">Log-in</a>
+                    <a href="../index.html">Home</a>
+                </div>
             </div>
+        </header>
+        <main>
+            <div class="Form1">
+                <form action="../php/Inlog.php" method="post">
+                    <label class="input2">SIGN-UP</label>
+                    <div>
+                        <p>Naam:</p>
+                        <p>Email:</p>
+                        <p>Password:</p>
+                    </div>
+                    <div>
+                        <input type="text" id="naam" name="naam" required>
+                        <input type="email" id="email" name="email" required>
+                        <input type="text" id="password" name="password" required>
+                    </div>
+                    <input type="submit" name="submit" class="knop2 input2">
+                </form>
             </div>
-    </header>
-    <main>
-        <div class="Form1">
-        <form action="../php/Inlog.php" enctype="multipart/form-data" method="post">
-            <label class="input2">SIGN-UP</label>
-            <p>Naam: <input type="text" id="naam" name="naam" required> </p> 
-            <p>Email: <input type="email" id="email" name="email" required> </p> 
-            <p>Password: <input type="text" id="password" name="password" required> </p> 
-            <input type="submit" name="submit" class="knop2 input2">
-        </form></div>
-    </main>
-    <footer>
-        <div class="footer">
-            <p class="footr">teste11111</p>
-        </div>
-    </footer>
-
-</body>
+        </main>
+        <footer>
+            <div id="footer">
+                <p>teste11111</p>
+            </div>
+        </footer>
+    </body>
 </html>
