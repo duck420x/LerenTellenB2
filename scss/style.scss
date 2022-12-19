@@ -204,9 +204,10 @@ main{
 }
 
 footer{
+    bottom: 0%;
     > div{
         width: 100%;
-        position: sticky;
+        position: sticky ;
         background-color: #98A8F8;
         height: 8%;
         text-align: center;
@@ -223,4 +224,36 @@ footer{
 }
 .ttl1{
     text-align: left;
+}
+.scores{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #adb8ee6e;
+    padding: 3% 5%;
+    margin: 2% 5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .ttlHG{
+        text-decoration: underline;
+        font-size: xx-large;
+        font-weight: 700;
+    }
+    table{
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 2%;
+        border-collapse: collapse;
+        width: 100%;
+        border-radius: 10px;
+        td, th {
+            border: 2px solid lightgrey;
+            text-align: center;
+            padding: 8px 10vw;
+            background-color: #bccef87f;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    }
+}
+tr:nth-child(even) {
+  background-color: #98A8F8;
 }
