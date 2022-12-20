@@ -41,22 +41,22 @@
             <div>
                 <h1>Question 1</h1>
                 <p>[question]</p>
-                <form action="" method="post">
+                <form action="<?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
                     <input type="hidden" value="answer1">
                     <input type="submit" value="[answer1]">
                 </form>
-                <form action="" method="post">
+                <!-- <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
                     <input type="hidden" value="answer2">
                     <input type="submit" value="[answer2]">
                 </form>
-                <form action="" method="post">
+                <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
                     <input type="hidden" value="answer3">
                     <input type="submit" value="[answer3]">
                 </form>
-                <form action="" method="post">
+                <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
                     <input type="hidden" value="answer4">
                     <input type="submit" value="[answer4]">
-                </form>
+                </form> -->
             </div>
         </div>
 
@@ -71,3 +71,7 @@
 
 <?php
     $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
+
+    if(!empty($_POST)){
+        echo "bababoey";
+    }
