@@ -2,65 +2,64 @@
  //you can change the questions to your own taste or even add more questions..
  const questions = [
     {
-        question: "How many days makes a week ?",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
+        question: "Hoeveel is 5 + 5?",
+        optionA: "1",
+        optionB: "9",
+        optionC: "8",
+        optionD: "10",
         correctOption: "optionD"
     },
 
     {
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
+        question: "Hoeveel is 10 - 5?",
+        optionA: "3",
+        optionB: "5",
+        optionC: "4",
+        optionD: "11",
         correctOption: "optionB"
     },
 
     {
-        question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        optionD: "George Washington",
-        correctOption: "optionD"
+        question: "Wat is meer? 11 + 9 of 21?",
+        optionA: "11 + 9",
+        optionB: "21",
+        optionC: "Geen van beide",
+        correctOption: "optionB"
     },
 
     {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        optionD: "August",
+        question: "Larissa loopt voor 20 seconden. Henk loopt 10 seconden langer. Hoeveel seconden loopt Henk?",
+        optionA: "10 seconden",
+        optionB: "40 seconden",
+        optionC: "30 seconden",
+        optionD: "20 seconden",
         correctOption: "optionC"
     },
 
     {
-        question: "How manay hours can be found in a day ?",
-        optionA: "30 hours",
-        optionB: "38 hours",
-        optionC: "48 hours",
-        optionD: "24 hours",
+        question: "Hoeveel seconden zitten er in een halve minuut?",
+        optionA: "60 seconden",
+        optionB: "40 seconden",
+        optionC: "50 seconden",
+        optionD: "30 seconden",
         correctOption: "optionD"
     },
 
     {
-        question: "Which is the longest river in the world ?",
-        optionA: "River Nile",
-        optionB: "Long River",
-        optionC: "River Niger",
-        optionD: "Lake Chad",
+        question: "5 x 5 = ?",
+        optionA: "25",
+        optionB: "15",
+        optionC: "5",
+        optionD: "50",
         correctOption: "optionA"
     },
 
     {
-        question: "_____ is the hottest Continent on Earth ?",
-        optionA: "Oceania",
-        optionB: "Antarctica",
-        optionC: "Africa",
-        optionD: "North America",
+        question: "50 - 20 = ?",
+        optionA: "40",
+        optionB: "10",
+        optionC: "30",
+        optionD: "20",
         correctOption: "optionC"
     },
 
