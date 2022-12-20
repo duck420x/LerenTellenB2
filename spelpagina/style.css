@@ -49,6 +49,7 @@ main{
     align-items: center;
     justify-content: space-around;
     border-radius: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .game-details-container{
@@ -70,7 +71,9 @@ main{
     align-items: center;
     justify-content: center;
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(203, 230, 239);
 }
 
 .game-question-container h1{
@@ -86,13 +89,17 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .game-options-container span{
     width: 45%;
     height: 3rem;
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(203, 230, 239);
+
     overflow: hidden;
 }
 span label{
@@ -201,6 +208,7 @@ input[type=radio]:checked ~ .option {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .modal-button-container button{
@@ -213,6 +221,7 @@ input[type=radio]:checked ~ .option {
     font-size: 1.1rem;
     cursor: pointer;
     border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .modal-button-container button:hover{
     background-color: rgb(83, 82, 82);
@@ -285,6 +294,8 @@ input[type=radio]:checked ~ .option {
 
     .game-question-container{
         height: 8rem;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .game-question-container h1{
@@ -302,8 +313,18 @@ input[type=radio]:checked ~ .option {
         font-size: 1.2rem;
     }
 }
-
-
+#option-one-label{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#option-two-label{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#option-three-label{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#option-four-label{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
 @keyframes fadeIn {
     from {opacity: 0;}
