@@ -50,6 +50,7 @@ main{
     justify-content: space-around;
     border-radius: 30px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size:x-large;
 }
 
 .game-details-container{
@@ -80,6 +81,7 @@ main{
     font-size: 1.1rem;
     text-align: center;
     padding: 3px;
+    font-size:x-large;
 }
 
 .game-options-container{
@@ -91,6 +93,9 @@ main{
     justify-content: space-around;
 
 }
+.navbar{
+    display: flex;
+}
 
 .game-options-container span{
     width: 45%;
@@ -99,7 +104,7 @@ main{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
     background-color: rgb(203, 230, 239);
-
+    font-size:x-large;
     overflow: hidden;
 }
 span label{
@@ -148,6 +153,10 @@ input[type=radio]:checked ~ .option {
     cursor: pointer;
     outline: none;
 }
+.kaas{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .next-button-container button:hover{
     background-color: rgb(211, 77, 77);
 }
