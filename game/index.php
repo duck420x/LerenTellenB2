@@ -41,9 +41,9 @@
             <div>
                 <h1>Question 1</h1>
                 <p>[question]</p>
-                <form action="<?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
+                <form action="" method="post">
                     <input type="hidden" value="answer1">
-                    <input type="submit" value="[answer1]">
+                    <input type="submit" value="answer1">
                 </form>
                 <!-- <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
                     <input type="hidden" value="answer2">
@@ -66,12 +66,15 @@
                 <p>Powered by GLR</p>
             </div>
         </footer>
+        <?php
+            $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
+
+            echo "test";
+            print_r($_POST);
+
+            if(!empty($_POST)){
+                echo "werkt";
+            }
+        ?>
     </body>
 </html>
-
-<?php
-    $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
-
-    if(!empty($_POST)){
-        echo "bababoey";
-    }
