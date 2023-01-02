@@ -15,13 +15,16 @@
         <meta name="Author" content="Stef88129">
     </head>
     <body>
+        <!-- Header image -->
         <header>
             <div>
                 <img src="./images/background101.png" id="fotoHeader">
             </div>
         </header>
+
+        <!-- Navbar -->
         <div id="navbar">
-            <a class="active" href="javascript:void(0)">Leren Tellen</a>
+            <a class="active" href="">Leren Tellen</a>
             <div class="nav2">
                 <?php
                     if(isset($_SESSION['loggedIn'])){
@@ -41,6 +44,8 @@
                 <a href="highscores/">Highscores</a>
             </div>
         </div>
+
+        <!-- Info -->
         <main>
             <div class="InfoHome">
                 <p class="info"> <div id="titleHome">
@@ -49,6 +54,8 @@
             </div>
             <a href="spelpagina"><p class="knop">Play</p></a>
         </main>
+
+        <!-- Footer -->
         <footer>
             <div>
                 <p>Powered by GLR</p>

@@ -15,7 +15,7 @@
     <body>
         <!-- Navbar -->
         <div id="navbar">
-            <a class="active" href="javascript:void(0)">Leren Tellen</a>
+            <a class="active" href="../">Leren Tellen</a>
             <div class="nav2">
                 <?php
                     if(isset($_SESSION['loggedIn'])){
@@ -38,43 +38,43 @@
 
         <!-- Game -->
         <div id="contentDiv">
-            <div>
+            <div class="itemDiv">
                 <h1>Question 1</h1>
-                <p>[question]</p>
-                <form action="" method="post">
-                    <input type="hidden" value="answer1">
-                    <input type="submit" value="answer1">
+                <p>Hoeveel is 5 + 5?</p>
+                <form method="post">
+                    <input type="hidden" name="question1" value="answer1">
+                    <input type="submit" value="1">
                 </form>
-                <!-- <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
-                    <input type="hidden" value="answer2">
-                    <input type="submit" value="[answer2]">
+                <form method="post">
+                    <input type="hidden" name="question1" value="answer2">
+                    <input type="submit" value="9">
                 </form>
-                <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
-                    <input type="hidden" value="answer3">
-                    <input type="submit" value="[answer3]">
+                <form method="post">
+                    <input type="hidden" name="question1" value="answer3">
+                    <input type="submit" value="8">
                 </form>
-                <form action="?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
-                    <input type="hidden" value="answer4">
-                    <input type="submit" value="[answer4]">
-                </form> -->
+                <form method="post">
+                    <input type="hidden" name="question1" value="answer4">
+                    <input type="submit" value="10">
+                </form>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer class="footerFixed">
             <div>
                 <p>Powered by GLR</p>
             </div>
         </footer>
+
         <?php
             $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
 
-            echo "test";
-            print_r($_POST);
-
             if(!empty($_POST)){
-                echo "werkt";
+                print_r($_POST);
+                echo "<br><br>werkt!!!";
             }
         ?>
+
     </body>
 </html>
