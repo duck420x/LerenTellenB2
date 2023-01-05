@@ -52,7 +52,7 @@
                     <p class="ttl1" style="text-align: center;">Leren Tellen!</p>
                 </div>Dit spel is gemaakt voor basis school leerlingen die willen leren tellen. De bedoeling is dat de leerlingen leren tellen tot 50.<br/> Dit gaan we doen door een aantal levels te maken van 10 vragen die steeds moeilijker worden, van deze 10 vragen <br/> heb je er minimaal 6 goed nodig om door te gaan naar het volgende level. </p>
             </div>
-            <a href="spelpagina"><p class="knop">Play</p></a>
+            <a href="game"><p class="knop">Play</p></a>
         </main>
 
         <!-- Footer -->
