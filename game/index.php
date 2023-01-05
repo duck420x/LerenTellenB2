@@ -107,19 +107,19 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='answer1'>
+                                    <input type='hidden' name='question1' value='1'>
                                     <input type='submit' value='1'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='answer2'>
+                                    <input type='hidden' name='question1' value='2'>
                                     <input type='submit' value='9'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='answer3'>
+                                    <input type='hidden' name='question1' value='3'>
                                     <input type='submit' value='8'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='answer4'>
+                                    <input type='hidden' name='question1' value='4'>
                                     <input type='submit' value='10'>
                                 </form>
                             </div>
@@ -132,19 +132,19 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='answer1'>
+                                    <input type='hidden' name='question2' value='1'>
                                     <input type='submit' value='3'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='answer2'>
+                                    <input type='hidden' name='question2' value='2'>
                                     <input type='submit' value='5'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='answer3'>
+                                    <input type='hidden' name='question2' value='3'>
                                     <input type='submit' value='4'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='answer4'>
+                                    <input type='hidden' name='question2' value='4'>
                                     <input type='submit' value='11'>
                                 </form>
                             </div>
@@ -157,15 +157,15 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='answer1'>
+                                    <input type='hidden' name='question3' value='1'>
                                     <input type='submit' value='11 + 9'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='answer2'>
+                                    <input type='hidden' name='question3' value='2'>
                                     <input type='submit' value='21'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='answer3'>
+                                    <input type='hidden' name='question3' value='3'>
                                     <input type='submit' value='Geen van beide'>
                                 </form>
                             </div>
@@ -178,19 +178,19 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='answer1'>
+                                    <input type='hidden' name='question4' value='1'>
                                     <input type='submit' value='10 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='answer2'>
+                                    <input type='hidden' name='question4' value='2'>
                                     <input type='submit' value='40 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='answer3'>
+                                    <input type='hidden' name='question4' value='3'>
                                     <input type='submit' value='30 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='answer4'>
+                                    <input type='hidden' name='question4' value='4'>
                                     <input type='submit' value='20 seconden'>
                                 </form>
                             </div>
@@ -211,10 +211,10 @@
         <?php
             if(!empty($_POST)){
                 if(
-                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] == "answer4") ||
-                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] == "answer2") ||
-                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] == "answer2") ||
-                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] == "answer3")
+                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] == "4") ||
+                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] == "2") ||
+                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] == "2") ||
+                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] == "3")
                 ){
                     $_SESSION['answeredCorrectly']++;
                     $_SESSION['currentQuestion']++;
@@ -222,10 +222,10 @@
                     header("Refresh:2");
                 }
                 else if(
-                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] != "answer4") ||
-                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] != "answer2") ||
-                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] != "answer2") ||
-                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] != "answer3")
+                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] != "4") ||
+                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] != "2") ||
+                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] != "2") ||
+                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] != "3")
                 ){
                     $_SESSION['answeredWrongly']++;
                     $_SESSION['currentQuestion']++;
