@@ -37,18 +37,21 @@
 
     if($formPassword == $formPasswordRepeated){
         // Check if username already exists
-        $query  = "SELECT * FROM users WHERE username = '$formUsername'";
-        $result = mysqli_query($dbConn, $query);
+        $query  = $dbConn->prepare("SELECT * FROM users WHERE username = ?");
+        $query->bind_param('s', $formUsername);
+        $query->execute();
+        $result = $query->get_result();
 
         $previousPage = $_SESSION['previousPage'];
 
         // If username doesn't exist already proceed with account creation
         if(mysqli_num_rows($result) == 0){
             $formPasswordHashed = password_hash($formPassword, PASSWORD_DEFAULT);
-            $query2             = "INSERT INTO users (username, password) VALUES ('$formUsername', '$formPasswordHashed')";
 
             // Insert data in users table in beroeps2Verzamelaar database
-            mysqli_query($dbConn, $query2);
+            $query2 = $dbConn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+            $query2->bind_param('ss', $formUsername, $formPasswordHashed);
+            $query2->execute();
 
             echo
                 "<div id='content'>",

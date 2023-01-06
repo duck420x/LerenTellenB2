@@ -62,8 +62,10 @@
             }
 
             $id     = $_SESSION["id"];
-            $query  = "SELECT * FROM userprogress WHERE userId = '$id'";
-            $result = mysqli_query($dbConn, $query);
+            $query  = $dbConn->prepare("SELECT * FROM userprogress WHERE userId = ?");
+            $query->bind_param('i', $id);
+            $query->execute();
+            $result = $query->get_result();
 
             if(mysqli_num_rows($result) > 0){
                 $row   = mysqli_fetch_array($result, MYSQLI_BOTH);
@@ -248,8 +250,10 @@
                 }
 
                 $id     = $_SESSION["id"];
-                $query  = "SELECT * FROM userprogress WHERE userId = '$id'";
-                $result = mysqli_query($dbConn, $query);
+                $query  = $dbConn->prepare("SELECT * FROM userprogress WHERE userId = ?");
+                $query->bind_param('i', $id);
+                $query->execute();
+                $result = $query->get_result();
 
                 if(mysqli_num_rows($result) > 0){
                     $row   = mysqli_fetch_array($result, MYSQLI_BOTH);
@@ -265,15 +269,15 @@
 
                 // If a DB entry already exists for a user, update data in userprogress table in beroeps2Verzamelaar database
                 if(mysqli_num_rows($result) > 0){
-                    $query2 = "UPDATE userprogress SET question = $question, answeredCorrectly = $answeredCorrectly, answeredWrongly = $answeredWrongly WHERE userId = $id";
-
-                    mysqli_query($dbConn, $query2);
+                    $query2 = $dbConn->prepare("UPDATE userprogress SET question = ?, answeredCorrectly = ?, answeredWrongly = ? WHERE userId = ?");
+                    $query2->bind_param('iiii', $question, $answeredCorrectly, $answeredWrongly, $id);
+                    $query2->execute();
                 }
                 // If a DB entry doesn't exist yet for a user, Insert data in userprogress table in beroeps2Verzamelaar database
                 else{
-                    $query2 = "INSERT INTO userprogress (userId, level, question, answeredCorrectly, answeredWrongly) VALUES ('$id', $level, $question, $answeredCorrectly, $answeredWrongly)";
-
-                    mysqli_query($dbConn, $query2);
+                    $query2 = $dbConn->prepare("INSERT INTO userprogress (userId, level, question, answeredCorrectly, answeredWrongly) VALUES (?, ?, ?, ?, ?)");
+                    $query2->bind_param('iiiii', $id, $level, $question, $answeredCorrectly, $answeredWrongly);
+                    $query2->execute();
                 }
             }
         ?>

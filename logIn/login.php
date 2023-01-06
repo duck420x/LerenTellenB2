@@ -33,8 +33,10 @@
     $formUsername   = $_REQUEST['username'];
     $formPassword   = $_REQUEST['password'];
 
-    $query          = "SELECT * FROM users WHERE username = '$formUsername'";
-    $result         = mysqli_query($dbConn, $query);
+    $query  = $dbConn->prepare("SELECT * FROM users WHERE username = ?");
+    $query->bind_param('s', $formUsername);
+    $query->execute();
+    $result = $query->get_result();
 
     // Fetch all data from entered username from users table from beroeps2Verzamelaar database
     $row        = mysqli_fetch_array($result, MYSQLI_BOTH);

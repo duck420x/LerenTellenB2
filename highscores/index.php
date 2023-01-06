@@ -62,10 +62,13 @@
 
                 if(mysqli_num_rows($result) > 0){
                     while($item = mysqli_fetch_assoc($result)){
-                        $id     = $item['userId'];
-                        $query2 = "SELECT username FROM users WHERE id = $id";
-                        $result = mysqli_query($dbConn, $query2);
-                        $row    = mysqli_fetch_array($result, MYSQLI_BOTH);
+                        $id        = $item['userId'];
+                        $query2    = $dbConn->prepare("SELECT username FROM users WHERE id = ?");
+                        $query2->bind_param('i', $id);
+                        $query2->execute();
+                        $result    = $query2->get_result();
+
+                        $row       = mysqli_fetch_array($result, MYSQLI_BOTH);
                         $username2 = $row['username'];
 
                         echo "
