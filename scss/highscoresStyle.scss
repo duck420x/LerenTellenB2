@@ -1,17 +1,26 @@
-//  | Voeg hier styling toe voor de tabel op highscores pagina
-// \ /
-//  V
-
 table{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+
     > tbody{
         > tr{
-            > th{
-
-            }
-
+            > th,
             > td{
-
+                border: 2px solid lightgrey;
+                text-align: center;
+                padding: 8px 10vw;
+                background-color: #bccef87f;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             }
+        }
+
+        > tr:nth-child(even){
+            background-color: #98A8F8;
         }
     }
 }
