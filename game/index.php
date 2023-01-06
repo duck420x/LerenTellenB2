@@ -49,17 +49,7 @@
         <?php
             $_SESSION['previousPage'] = $_SERVER['REQUEST_URI'];
 
-            $host     = "localhost";
-            $username = "beroeps2LerenTellenUser";
-            $password = "ymLvtJSZt$\$tEX639WMYNA!ybo&V7st6\$x64S*AT$9QEzg6*gjQ*@@cox^@d29XuBqUfp6W!B3m@LMFWSR5d3*WXVY92ksogx@gsCx*A4d7ABX#9SP*g8RCF27qcd*rK";
-            $database = "beroeps2LerenTellen";
-
-            $dbConn   = mysqli_connect($host, $username, $password, $database);
-
-            // Check connection
-            if(!$dbConn){
-                die("ERROR: Could not connect. ". mysqli_connect_error());
-            }
+            require "../dbConn.php";
 
             $id     = $_SESSION["id"];
             $query  = $dbConn->prepare("SELECT * FROM userprogress WHERE userId = ?");
@@ -74,11 +64,15 @@
                 $answeredCorrectly = $row['answeredCorrectly'];
                 $answeredWrongly = $row['answeredWrongly'];
 
+                $_SESSION['currentLevel'] = $level;
                 $_SESSION['currentQuestion'] = $question;
                 $_SESSION['answeredCorrectly'] = $answeredCorrectly;
                 $_SESSION['answeredWrongly'] = $answeredWrongly;
             }
 
+            if(!isset($_SESSION['currentLevel'])){
+                $_SESSION['currentLevel'] = 1;
+            }
             if(!isset($_SESSION['currentQuestion'])){
                 $_SESSION['currentQuestion'] = 1;
             }
@@ -109,19 +103,19 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='1'>
+                                    <input type='hidden' name='1' value='1'>
                                     <input type='submit' value='1'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='2'>
+                                    <input type='hidden' name='1' value='2'>
                                     <input type='submit' value='9'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='3'>
+                                    <input type='hidden' name='1' value='3'>
                                     <input type='submit' value='8'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question1' value='4'>
+                                    <input type='hidden' name='1' value='4'>
                                     <input type='submit' value='10'>
                                 </form>
                             </div>
@@ -134,19 +128,19 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='1'>
+                                    <input type='hidden' name='2' value='1'>
                                     <input type='submit' value='3'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='2'>
+                                    <input type='hidden' name='2' value='2'>
                                     <input type='submit' value='5'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='3'>
+                                    <input type='hidden' name='2' value='3'>
                                     <input type='submit' value='4'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question2' value='4'>
+                                    <input type='hidden' name='2' value='4'>
                                     <input type='submit' value='11'>
                                 </form>
                             </div>
@@ -159,15 +153,15 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='1'>
+                                    <input type='hidden' name='3' value='1'>
                                     <input type='submit' value='11 + 9'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='2'>
+                                    <input type='hidden' name='3' value='2'>
                                     <input type='submit' value='21'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question3' value='3'>
+                                    <input type='hidden' name='3' value='3'>
                                     <input type='submit' value='Geen van beide'>
                                 </form>
                             </div>
@@ -180,20 +174,170 @@
                             </div>
                             <div>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='1'>
+                                    <input type='hidden' name='4' value='1'>
                                     <input type='submit' value='10 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='2'>
+                                    <input type='hidden' name='4' value='2'>
                                     <input type='submit' value='40 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='3'>
+                                    <input type='hidden' name='4' value='3'>
                                     <input type='submit' value='30 seconden'>
                                 </form>
                                 <form method='post'>
-                                    <input type='hidden' name='question4' value='4'>
+                                    <input type='hidden' name='4' value='4'>
                                     <input type='submit' value='20 seconden'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 5){
+                        echo "
+                            <div>
+                                <p>Hoeveel seconden zitten er in een halve&nbsp;minuut?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='5' value='1'>
+                                    <input type='submit' value='60 seconden'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='5' value='2'>
+                                    <input type='submit' value='40 seconden'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='5' value='3'>
+                                    <input type='submit' value='50 seconden'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='5' value='4'>
+                                    <input type='submit' value='30 seconden'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 6){
+                        echo "
+                            <div>
+                                <p>5 x 5 = ?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='6' value='1'>
+                                    <input type='submit' value='25'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='6' value='2'>
+                                    <input type='submit' value='15'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='6' value='3'>
+                                    <input type='submit' value='5'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='6' value='4'>
+                                    <input type='submit' value='50'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 7){
+                        echo "
+                            <div>
+                                <p>50 - 20 = ?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='7' value='1'>
+                                    <input type='submit' value='40'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='7' value='2'>
+                                    <input type='submit' value='10'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='7' value='3'>
+                                    <input type='submit' value='30'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='7' value='4'>
+                                    <input type='submit' value='20'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 8){
+                        echo "
+                            <div>
+                                <p>5 + 5 = ?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='8' value='1'>
+                                    <input type='submit' value='10'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='8' value='2'>
+                                    <input type='submit' value='7'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='8' value='3'>
+                                    <input type='submit' value='5'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='8' value='4'>
+                                    <input type='submit' value='3'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 9){
+                        echo "
+                            <div>
+                                <p>Which of these numbers is an odd number ?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='9' value='1'>
+                                    <input type='submit' value='Ten'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='9' value='2'>
+                                    <input type='submit' value='Twelve'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='9' value='3'>
+                                    <input type='submit' value='Eight'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='9' value='4'>
+                                    <input type='submit' value='Eleven'>
+                                </form>
+                            </div>
+                        ";
+                    }
+                    if($_SESSION['currentQuestion'] == 10){
+                        echo "
+                            <div>
+                                <p>7 X 2 = ?</p>
+                            </div>
+                            <div>
+                                <form method='post'>
+                                    <input type='hidden' name='10' value='1'>
+                                    <input type='submit' value='10'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='10' value='2'>
+                                    <input type='submit' value='16'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='10' value='3'>
+                                    <input type='submit' value='15'>
+                                </form>
+                                <form method='post'>
+                                    <input type='hidden' name='10' value='4'>
+                                    <input type='submit' value='14'>
                                 </form>
                             </div>
                         ";
@@ -213,10 +357,15 @@
         <?php
             if(!empty($_POST)){
                 if(
-                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] == "4") ||
-                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] == "2") ||
-                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] == "2") ||
-                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] == "3")
+                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["1"]) && $_POST["1"] == "4") ||
+                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["2"]) && $_POST["2"] == "2") ||
+                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["3"]) && $_POST["3"] == "2") ||
+                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["4"]) && $_POST["4"] == "3") ||
+                    ($_SESSION['currentQuestion'] == 5 && isset($_POST["5"]) && $_POST["5"] == "4") ||
+                    ($_SESSION['currentQuestion'] == 6 && isset($_POST["6"]) && $_POST["6"] == "1") ||
+                    ($_SESSION['currentQuestion'] == 7 && isset($_POST["7"]) && $_POST["7"] == "3") ||
+                    ($_SESSION['currentQuestion'] == 8 && isset($_POST["8"]) && $_POST["8"] == "1") ||
+                    ($_SESSION['currentQuestion'] == 9 && isset($_POST["9"]) && $_POST["9"] == "4")
                 ){
                     $_SESSION['answeredCorrectly']++;
                     $_SESSION['currentQuestion']++;
@@ -224,30 +373,37 @@
                     header("Refresh:2");
                 }
                 else if(
-                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["question1"]) && $_POST["question1"] != "4") ||
-                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["question2"]) && $_POST["question2"] != "2") ||
-                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["question3"]) && $_POST["question3"] != "2") ||
-                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["question4"]) && $_POST["question4"] != "3")
+                    ($_SESSION['currentQuestion'] == 1 && isset($_POST["1"]) && $_POST["1"] != "4") ||
+                    ($_SESSION['currentQuestion'] == 2 && isset($_POST["2"]) && $_POST["2"] != "2") ||
+                    ($_SESSION['currentQuestion'] == 3 && isset($_POST["3"]) && $_POST["3"] != "2") ||
+                    ($_SESSION['currentQuestion'] == 4 && isset($_POST["4"]) && $_POST["4"] != "3") ||
+                    ($_SESSION['currentQuestion'] == 5 && isset($_POST["5"]) && $_POST["5"] != "4") ||
+                    ($_SESSION['currentQuestion'] == 6 && isset($_POST["6"]) && $_POST["6"] != "1") ||
+                    ($_SESSION['currentQuestion'] == 7 && isset($_POST["7"]) && $_POST["7"] != "3") ||
+                    ($_SESSION['currentQuestion'] == 8 && isset($_POST["8"]) && $_POST["8"] != "1") ||
+                    ($_SESSION['currentQuestion'] == 9 && isset($_POST["9"]) && $_POST["9"] != "4")
                 ){
                     $_SESSION['answeredWrongly']++;
                     $_SESSION['currentQuestion']++;
                     insertIntoDB();
                     header("Refresh:2");
                 }
+                else if($_SESSION['currentQuestion'] == 10 && isset($_POST["10"]) && $_POST["10"] == "4"){
+                    $_SESSION['answeredCorrectly']++;
+                    insertIntoDB();
+                    lastQuestionAnswered();
+                    header("Refresh:2");
+                }
+                else if($_SESSION['currentQuestion'] == 10 && isset($_POST["10"]) && $_POST["10"] != "4"){
+                    $_SESSION['answeredWrongly']++;
+                    insertIntoDB();
+                    lastQuestionAnswered();
+                    header("Refresh:2");
+                }
             }
 
             function insertIntoDB(){
-                $host     = "localhost";
-                $username = "beroeps2LerenTellenUser";
-                $password = "ymLvtJSZt$\$tEX639WMYNA!ybo&V7st6\$x64S*AT$9QEzg6*gjQ*@@cox^@d29XuBqUfp6W!B3m@LMFWSR5d3*WXVY92ksogx@gsCx*A4d7ABX#9SP*g8RCF27qcd*rK";
-                $database = "beroeps2LerenTellen";
-
-                $dbConn   = mysqli_connect($host, $username, $password, $database);
-
-                // Check connection
-                if(!$dbConn){
-                    die("ERROR: Could not connect. ". mysqli_connect_error());
-                }
+                require "../dbConn.php";
 
                 $id     = $_SESSION["id"];
                 $query  = $dbConn->prepare("SELECT * FROM userprogress WHERE userId = ?");
@@ -278,6 +434,30 @@
                     $query2 = $dbConn->prepare("INSERT INTO userprogress (userId, level, question, answeredCorrectly, answeredWrongly) VALUES (?, ?, ?, ?, ?)");
                     $query2->bind_param('iiiii', $id, $level, $question, $answeredCorrectly, $answeredWrongly);
                     $query2->execute();
+                }
+            }
+
+            function lastQuestionAnswered(){
+                require "../dbConn.php";
+
+                if($_SESSION['answeredCorrectly'] >= 6){
+                    $_SESSION['currentLevel']++;
+                    $_SESSION['currentQuestion']   = 1;
+                    $_SESSION['answeredCorrectly'] = 0;
+                    $_SESSION['answeredWrongly']   = 0;
+
+                    $id                = $_SESSION["id"];
+                    $level             = $_SESSION['currentLevel'];
+                    $question          = $_SESSION['currentQuestion'];
+                    $answeredCorrectly = $_SESSION['answeredCorrectly'];
+                    $answeredWrongly   = $_SESSION['answeredWrongly'];
+
+                    $query2 = $dbConn->prepare("UPDATE userprogress SET level = ?, question = ?, answeredCorrectly = ?, answeredWrongly = ? WHERE userId = ?");
+                    $query2->bind_param('iiiii', $level, $question, $answeredCorrectly, $answeredWrongly, $id);
+                    $query2->execute();
+                }
+                else{
+                    $_SESSION['currentQuestion'] = 1;
                 }
             }
         ?>
