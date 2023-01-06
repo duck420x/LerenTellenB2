@@ -10,9 +10,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HomePage</title>
+        <meta name="Author" content="Stef88129">
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
         <link rel="stylesheet" href="./css/style.css">
-        <meta name="Author" content="Stef88129">
+        <link rel="stylesheet" href="./css/indexStyle.css">
     </head>
     <body>
         <!-- Header image -->

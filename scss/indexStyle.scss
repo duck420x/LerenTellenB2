@@ -1,0 +1,61 @@
+header{
+    width: 100%;
+
+    > div{
+        background-color: #FAF7F0;
+        margin-bottom: -0.40%;
+        width: 100%;
+
+        > img{
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+main{
+    text-align: center;
+}
+
+#titleHome{
+    font-size: xxx-large;
+    color: black;
+    font-weight: 550;
+    font-family: 'Rubik Vinyl', cursive;
+    margin-top: -1%;
+}
+
+.InfoHome{
+    margin: 3% 7% 0% 7%;
+    background-color: #bccef87f;
+    padding: 1% 2% 2% 2%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+}
+
+.info{
+    margin: 1% 2% -0.5% 2%;
+}
+
+.knop{
+    min-width: 100px;
+    background-color: #BCCEF8;
+    margin: 2% 46% 2% 46%;
+    padding: 0.5% 0 0.5% 0; 
+    transition-duration: 500ms;
+    border: 2px solid #65656539;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.knop:hover{
+    border-radius: 10px;
+    background-color: #87a0da;
+    border: 2px solid #a2ecf4;
+    padding: -1%;
+}
+
+.ttl1{
+    text-align: left;
+}
