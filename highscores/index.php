@@ -48,7 +48,7 @@
             <?php
                 require "../dbConn.php";
 
-                $query  = "SELECT * FROM userprogress";
+                $query  = "SELECT * FROM userprogress ORDER BY level DESC";
                 $result = mysqli_query($dbConn, $query);
 
                 if(mysqli_num_rows($result) > 0){
